@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt-Mee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🐾 Adopt-Mee</div>
+
+    <div class="nav-menu">
+        <a href="#home">Beranda</a>
+        <a href="#pets">Hewan</a>
+        <button onclick="bukaKeranjang()">🛒 Keranjang (<span id="jumlahKeranjang">0</span>)</button>
+    </div>
+</nav>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p>WELCOME TO ADOPT-MEE</p>
+
+        <h1>
+            Temukan teman baru<br>
+            yang cocok untukmu 🐾
+        </h1>
+
+        <span>
+            Temukan ras favorit anjing dan kucing yang cocok dengan gaya hidup serta kebutuhan harianmu.
+        </span>
+
+        <br>
+
+        <a href="#pets" class="btn">
+            Lihat Koleksi
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="pets" id="pets">
+
+    <div class="section-title">
+
+        <p>OUR PETS</p>
+
+        <h2>Koleksi Hewan Peliharaan</h2>
+
+        <span>
+            Pilih ras yang kamu sukai dan lihat kebutuhan utama seperti makanan, perlengkapan, serta aksesori harian.
+        </span>
+
+    </div>
+
+    <div class="pet-toolbar">
+
+        <div class="pet-filters-group">
+            <div class="pet-filters">
+                <button class="filter-btn active" data-type="all">Semua</button>
+                <button class="filter-btn" data-type="dog">Anjing</button>
+                <button class="filter-btn" data-type="cat">Kucing</button>
+            </div>
+
+            <div class="pet-filters needs-filters">
+                <button class="filter-btn need-filter" data-category="Aksesoris">Aksesoris</button>
+                <button class="filter-btn need-filter" data-category="Kandang">Kandang</button>
+            </div>
+        </div>
+
+        <div class="search">
+            <input
+                type="text"
+                id="search"
+                placeholder="🔍 Cari ras favorit..."
+            >
+        </div>
+
+    </div>
+
+    <div id="petContainer" class="pet-container">
+        <p>Sedang memuat koleksi hewan...</p>
+    </div>
+
+    <div class="needs-section">
+        <div class="section-title small-title">
+            <p>ESSENTIAL NEEDS</p>
+            <h2>Kebutuhan Harian Pet</h2>
+        </div>
+
+        <div id="needsContainer" class="needs-container">
+            <p>Sedang memuat kebutuhan pet...</p>
+        </div>
+    </div>
+
+</section>
+
+
+<div id="modal" class="modal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <h2>🛒 Keranjang</h2>
+
+            <button onclick="tutupKeranjang()">✕</button>
+
+        </div>
+
+        <div id="keranjang">
+
+            <p>Keranjang masih kosong.</p>
+
+        </div>
+
+        <div class="total">
+
+            <strong>Total</strong>
+
+            <strong id="total">
+                Rp 0
+            </strong>
+
+        </div>
+
+        <button
+            class="pesan"
+            onclick="pesanSekarang()"
+        >
+            Pesan Sekarang
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <h3>🐾 Adopt-Mee</h3>
+
+    <p>
+        Your pet, our care.
+    </p>
+
+    <small>
+        © 2026 Adopt-Mee
+    </small>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
